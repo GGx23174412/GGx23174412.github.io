@@ -1,105 +1,239 @@
-body {	
-	font-family: Arial, Helvetica, Sans-serif;
-	font-size: 16px;
+/*
+* Colour scheme:
+* Eerie black - #191919
+* Barn Red: #71000a
+* Raisin black - #272727  
+* font grey - #969696
+* violet blue - #4357AD
+* yellow - #f7cb15
+*/
+body{
+    background-color: #d3d3d3;
+    font-family: 'Lato';
+    font-size: 16px;
 	line-height: 1.5;
-	background-color: #d3d3d3;
 }
 
-.header {
-	text-align: center;
-    background: lightskyblue;
-    color: #333;
-	margin: 20px 20px 0px 20px;
-	padding: 10px;
+h1, h2, h3, h4 {
+    font-family: 'Muli';
+    font-weight: bold;
 }
 
-.navbar {
-    display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-start;
-    background-color: #333;
-	margin: 0px 20px 20px 20px;
-	height: 40px;
+h2 {
+	font-size: 2em;
+}
+	
+h3 {
+	font-size: 1.5em;
+}
+	
+h4 {
+	font-size: 1.125em;
 }
 
-.navbar a {
-	color: white;
-	text-decoration: none;
-	font-weight: bold;
-	padding: 0px 10px 0px 10px;
+h5 {
+    font-size: 1em;
+    font-weight: bold;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
+/* Navbar */
+.navbar{
+    background-color: #191919;
 }
 
-.container {
-    display: flex;
-	flex-direction: row;
-	align-items: stretch;
-	justify-content: space-around;
-	margin: 20px;
+.navbar h1{
+    font-size: 14px;
+    color: #969696;
 }
 
-.container div{
-	text-align: left;
-	padding: 10px;
+#logo a {
+    font-family: "Agbalumo";
+    color:white;
+    text-decoration: none;
+    font-size: 28px;
 }
 
-.sidebar1 {
-	width: 20%;
-	min-width: 200px;
-	background-color: #333;
-	color: white;
+.navbar-nav a{
+    font-weight: bold;
 }
 
-
-
-.imageContainer img{
-	border-radius: 30%;
-	width: 150px;
-    margin: auto;
-    display: block;
-}
-
-.sidebar1 a{
-	color: white;
-}
-
-.main {
-	width: 60%;
-	background-color: #d3d3d3;
-	color:black;
-	border-style: solid;
-	border-color: black;
-	border-width: 1px;
-}
-
-.sidebar2 {
-	width: 10%;
-	min-width: 100px;
-	background-color: #333;
-	color: white;
-}
-
-.specialList{
-	list-style: none;
-	padding: 0;
+/* Footer */
+.footer ul{
+    list-style-type: none;
+    padding: 0;
 	margin: 0;
 }
 
-.footer{
-	margin: 20px;
-	float: right;
+.horizontalNav{
+    display:flex;
+    list-style-type: none;
+    padding: 0;
+	margin: 0; 
 }
 
-@media screen and (max-width: 800px) {
-	.container {
-	  flex-direction: column;
-	}
-	.container div{
-		width: 100%;
-	}
+.socialNav{
+    font-size: 20px;
+}
+
+.horizontalNav li{
+    margin-right: 10px;
+}
+
+.footer a{
+    color: #969696;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    font-weight: bold;
+}
+
+.footerTopWrapper{
+    background-color: #272727;
+    color: #969696;
+}
+
+.footerBottomWrapper{
+    color: #969696;
+    background-color: #191919;
+    font-size: small;
+}
+
+/* Carrousel */
+.carousel-caption{
+    font-size: 24px;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.carousel-caption h5{
+    font-size: 32px;
+}
+
+/* Other */
+.tagLine{
+    font-style:italic;
+    font-size:large;
+    font-weight: bold;
+ }
+
+.founderQuote{
+    font-style:italic;
+    font-size:large;
+    font-weight: bold;
+}
+
+.founderQuote footer{
+    font-size:small;
+    font-weight:normal;
+}
+
+.promotionBanner{
+    font-size: 24px;
+    background-color: #71000a;
+    color: white;
+}
+
+.blackWrapper{
+    background-color: #313131;
+    color: white;
+}
+
+.blueWrapper{
+    background-image: url("../img/pexels-artem-podrez-7233130-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: darkblue;
+    color: white;
+}
+
+.roundPortrait{
+    border-radius: 50%;
+}
+
+.credit{
+    font-size: x-small;
+}
+
+.buttonYellow{
+    background-color: #f7cb15;
+    font-weight: bold;
+    text-decoration:none;
+    border:#191919;
+    color:#191919;
+    padding: 10px;
+}
+
+.buttonYellow:hover{
+    background-color: #969696;
+    color:#191919;
+}
+
+/* Form */
+.formContainer{
+    background-color: #e0e0e0;
+    border-style: solid;
+    border-color: #bababa;
+    border-radius: 2%;
+    padding: 15px;
+}
+
+.required:after{
+    content:" *";
+}
+
+.formErrorMessage{
+    color: red;
+    visibility: hidden;
+}
+
+/* Image gallery */
+.imageOverlay{
+    color: white;
+    font-size: small;
+    background-color: #191919;
+    opacity: 0.9;
+    visibility: hidden;
+}
+
+.imageOverlay p{
+    margin: 0;
+    padding: 0;
+}
+
+/* Game */
+canvas{
+    width: 100%;
+    height: 100%;
+    background-color: #4357AD;
+    border-style: solid;
+    border-color: #191919;
+}
+
+#gameWrapper{
+    z-index: 1;
+    max-width: 1000px;
+    max-height: 1000px;
+}
+
+#gameOverlay{
+    font-family: "Bangers";
+    font-size: 24px;
+    z-index: 2;
+    background-color: #191919;
+    color: white;
+}
+
+#gameOverlay h3{
+    font-family: "Bangers";
+    font-size: 52px;
+}
+
+#gameOverlay button{
+    font-weight: lighter;
+}
+
+.gameScore{
+    list-style-type: none;
+    padding: 0;
 }
